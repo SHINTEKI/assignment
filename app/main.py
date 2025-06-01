@@ -6,6 +6,7 @@ import numpy as np
 import pandas as pd
 import logging
 import math
+import os
 
 app = FastAPI()
 
@@ -14,7 +15,8 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 # Load trained model
-model = joblib.load("predictor.joblib")
+model_path = os.path.join(os.path.dirname(__file__), "predictor.joblib")
+model = joblib.load(model_path)
 
 # Define input schema
 class HouseFeatures(BaseModel):
