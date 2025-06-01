@@ -75,4 +75,6 @@ numpy==2.2.6
 pandas==2.2.3
 pydantic==2.11.5
 scikit_learn==1.6.1
+pytest==8.3.5
+uvicorn==0.34.3 
 ```
