@@ -4,6 +4,31 @@ I developed a simple machine learning microservice to predict real estate unit p
 
 ---
 
+## Code Structure
+
+assignment/
+├── app/
+│   ├── main.py                # FastAPI app with /predict and /health
+│   ├── predictor.joblib       # Trained machine learning model
+│   └── requirements.txt       # API dependencies
+├── data/
+│   └── Real estate.csv        # Raw dataset
+├── docs/
+│   └── DEPLOYMENT.md          # Deployment answers
+├── ml/
+│   ├── __init__.py
+│   └── train_model.py         # Model training and feature engineering
+├── test/
+│   ├── __init__.py
+│   └── test_model.py          # Unit tests for model integrity
+├── .github/workflows/         
+│   └── test.yaml              # Run unit testing with GitHub Actions
+├── predictor.dockerfile       # Dockerfile for model API
+├── requirements.txt           # Project-level dependencies
+└── README.md                  # Project introduction & usage
+
+---
+
 ## Solution Design
 
 - Feature engineering:
